@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" styleClass="border_plane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SPMultipleChoiceQuestionCtrl">
+   <center>
+      <VBox prefHeight="808.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="100.0" prefHeight="35.0" prefWidth="1920.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Text fx:id="questionText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Question Text ... ?" textAlignment="CENTER" wrappingWidth="1000.0" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxHeight="400.0" VBox.vgrow="ALWAYS">
+               <Region HBox.hgrow="ALWAYS" />
+               <Button fx:id="activityButton1" mnemonicParsing="false" onAction="#answerPress" prefHeight="400.0" prefWidth="350.0" styleClass="questionButton" textAlignment="CENTER" wrapText="true">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <graphic>
+                     <BorderPane prefHeight="200.0" prefWidth="200.0">
+                        <center>
+                           <ImageView fx:id="image1" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" BorderPane.alignment="CENTER" />
+                        </center>
+                        <bottom>
+                           <Text fx:id="activityText1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" textAlignment="CENTER" wrappingWidth="300.0" BorderPane.alignment="CENTER">
+                              <BorderPane.margin>
+                                 <Insets bottom="20.0" />
+                              </BorderPane.margin></Text>
+                        </bottom>
+                     </BorderPane>
+                  </graphic>
+               </Button>
+               <Region maxWidth="40.0" HBox.hgrow="ALWAYS" />
+               <Button fx:id="activityButton2" mnemonicParsing="false" onAction="#answerPress" prefHeight="400.0" prefWidth="350.0" styleClass="questionButton" textAlignment="CENTER" wrapText="true">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <graphic>
+                     <BorderPane prefHeight="200.0" prefWidth="334.0">
+                        <center>
+                           <ImageView fx:id="image2" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" BorderPane.alignment="CENTER" />
+                        </center>
+                        <bottom>
+                           <Text fx:id="activityText2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" textAlignment="CENTER" wrappingWidth="300.0" BorderPane.alignment="CENTER">
+                              <BorderPane.margin>
+                                 <Insets bottom="20.0" />
+                              </BorderPane.margin></Text>
+                        </bottom>
+                     </BorderPane>
+                  </graphic></Button>
+               <Region maxWidth="40.0" HBox.hgrow="ALWAYS" />
+               <Button fx:id="activityButton3" mnemonicParsing="false" onAction="#answerPress" prefHeight="400.0" prefWidth="350.0" styleClass="questionButton" textAlignment="CENTER" wrapText="true">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <graphic>
+                     <BorderPane prefHeight="200.0" prefWidth="200.0">
+                        <center>
+                           <ImageView fx:id="image3" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" BorderPane.alignment="CENTER" />
+                        </center>
+                        <bottom>
+                           <Text fx:id="activityText3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" textAlignment="CENTER" wrappingWidth="300.0" BorderPane.alignment="CENTER">
+                              <BorderPane.margin>
+                                 <Insets bottom="20.0" />
+                              </BorderPane.margin></Text>
+                        </bottom>
+                     </BorderPane>
+                  </graphic></Button>
+               <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+            <Region maxHeight="131.0" prefHeight="20.0" prefWidth="1920.0" VBox.vgrow="ALWAYS" />
+            <HBox maxHeight="300.0" prefHeight="74.0" prefWidth="1920.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="jokerButton0" layoutY="10.0" mnemonicParsing="false" onAction="#jokerPress" prefHeight="250.0" prefWidth="250.0" styleClass="jokerButton" text=" " />
+                  <Region maxWidth="40.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="jokerButton1" mnemonicParsing="false" onAction="#jokerPress" prefHeight="250.0" prefWidth="250.0" styleClass="jokerButton" text=" " />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="30.0" VBox.vgrow="ALWAYS" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Text fx:id="scoreText" fill="#8a2222" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Score: xxx" wrappingWidth="215.80859375">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Text>
+                  <Region maxWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <ProgressBar id="timer" fx:id="timerBar" prefHeight="76.0" prefWidth="914.0" progress="0.0" style="-fx-accent: #4D8C57;" />
+                  <Region maxWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <Text fx:id="timerText" fill="#cd3636" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="X s" wrappingWidth="121.26390838623047">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Text>
+                  <Region prefHeight="100.0" prefWidth="172.0" />
+                  <Label fx:id="counter" text="Label">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="100.0" prefWidth="70.0" />
+               </children>
+            </HBox>
+            <Region prefHeight="30.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Region prefHeight="17.0" prefWidth="1920.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

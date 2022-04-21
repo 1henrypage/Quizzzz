@@ -1,0 +1,62 @@
+@import "ScreenCommonCSS.css";
+
+.anchorPane {
+    -fx-background-color: #03071e;
+}
+
+.text {
+    -fx-fill: white;
+    -fx-font-size: 40;
+}
+
+
+.smallText{
+    -fx-font-size: 21px;
+    -fx-fill: white;
+}
+
+.bottomText{
+    -fx-fill: white;
+}
+
+.button{
+    -fx-min-height: 100px;
+}
+
+
+.list-view {
+    -fx-background-radius: 20;
+    -fx-border-radius: 15;
+    -fx-border-width: 5;
+    -fx-border-color: -button-border-color;
+    -fx-background-insets: 0.1;
+    -fx-background-color: -button-color;
+}
+
+.list-cell, .list-cell:focused {
+    -fx-border-width: 2;
+    -fx-border-color: -button-border-color;
+    -fx-background-color: -button-color;
+}
+
+.list-cell .text {
+    -fx-font-size: 50;
+}
+
+.scroll-bar{
+    -fx-background-color: -button-color;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 16.5;
+    -fx-padding: 3;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 16.5;
+    -fx-padding: 3;
+}
+
+.scroll-bar, .scroll-bar:pressed, .scroll-bar:focused {
+    -fx-font-size: 15;
+}

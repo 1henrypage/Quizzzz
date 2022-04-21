@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" styleClass="border_plane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.MPEstimateQuestionCtrl">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="200.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Text id="roundText" fx:id="roundOverText" fill="#35f227" strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting for the round to end" textAlignment="CENTER" visible="false" wrappingWidth="1000.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxHeight="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Text fx:id="questionText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Question Text ... ?" textAlignment="CENTER" wrappingWidth="1000.0" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxHeight="350.0" VBox.vgrow="ALWAYS">
+               <Region HBox.hgrow="ALWAYS" />
+               <Button fx:id="activityText" maxWidth="350.0" mnemonicParsing="false" prefHeight="350.0" prefWidth="350.0" styleClass="estimateQuestion" textAlignment="CENTER" wrapText="true">
+                  <graphic>
+                     <BorderPane prefWidth="306.0">
+                        <center>
+                           <ImageView fx:id="image" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        </center>
+                     </BorderPane>
+                  </graphic></Button>
+               <Region maxWidth="60.0" prefHeight="350.0" prefWidth="60.0" HBox.hgrow="ALWAYS" />
+               <VBox>
+                  <children>
+                     <Region VBox.vgrow="ALWAYS" />
+                     <Text fx:id="correctText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="correctAnswerText" text="Please only input numbers!" textAlignment="CENTER" visible="false" wrappingWidth="384.13671875">
+                        <font>
+                           <Font size="30.0" />
+                        </font>
+                     </Text>
+                     <Region minHeight="5.0" />
+                     <TextField fx:id="answerText" alignment="CENTER" onKeyPressed="#checkForEnter" prefHeight="64.0" prefWidth="370.0" promptText="Enter the value ...">
+                        <font>
+                           <Font size="31.0" />
+                        </font>
+                     </TextField>
+                     <Region prefHeight="0.0" prefWidth="385.0" />
+                     <Text fx:id="alertText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="alertText" text="Please only input numbers!" textAlignment="CENTER" wrappingWidth="384.13671875">
+                        <font>
+                           <Font size="30.0" />
+                        </font>
+                     </Text>
+                     <Region prefHeight="0.0" prefWidth="385.0" VBox.vgrow="ALWAYS" />
+                  </children>
+               </VBox>
+               <Region prefHeight="350.0" prefWidth="60.0" />
+               <VBox prefHeight="350.0" prefWidth="276.0">
+                  <children>
+                     <Region VBox.vgrow="ALWAYS" />
+                     <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickSubmit" prefHeight="100.0" prefWidth="200.0" text="Submit" textAlignment="CENTER" />
+                     <Region VBox.vgrow="ALWAYS" />
+                  </children>
+               </VBox>
+               <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+            <Region VBox.vgrow="ALWAYS" />
+            <HBox maxHeight="300.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="jokerButton0" mnemonicParsing="false" onAction="#jokerPress" prefHeight="280.0" prefWidth="280.0" styleClass="jokerButton" text=" " textAlignment="CENTER" wrapText="true" />
+                  <Region prefHeight="300.0" prefWidth="90.0" />
+                  <Button fx:id="jokerButton1" mnemonicParsing="false" onAction="#jokerPress" prefHeight="280.0" prefWidth="280.0" styleClass="jokerButton" text=" " textAlignment="CENTER" wrapText="true" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children></HBox>
+            <Region maxHeight="120.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="30.0" VBox.vgrow="ALWAYS" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Text fx:id="scoreText" fill="#8a2222" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Score: xxx" wrappingWidth="215.80859375">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Text>
+                  <Region maxWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <ProgressBar id="timer" fx:id="timerBar" prefHeight="76.0" prefWidth="914.0" progress="0.0" style="-fx-accent: #4D8C57;" />
+                  <Region maxWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <Text fx:id="timerText" fill="#cd3636" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="X s" wrappingWidth="121.26390838623047">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Text>
+                  <Region prefHeight="100.0" prefWidth="172.0" />
+                  <Label fx:id="counter" text="Label">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="100.0" prefWidth="70.0" />
+               </children>
+            </HBox>
+            <Region prefHeight="30.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox maxWidth="322.0" prefHeight="920.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="informationBox" prefHeight="292.0" prefWidth="322.0">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding></ListView>
+            <Region maxHeight="10.0" minHeight="10.0" />
+            <GridPane alignment="CENTER" hgap="10.0" prefHeight="134.0" prefWidth="215.0" vgap="10.0" VBox.vgrow="ALWAYS">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="70.0" percentHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="rButton0" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😃" />
+                  <Button fx:id="rButton1" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😊" GridPane.columnIndex="1" />
+                  <Button fx:id="rButton2" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😖" GridPane.columnIndex="2" />
+                  <Button fx:id="rButton3" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😕" GridPane.columnIndex="3" />
+                  <Button fx:id="rButton4" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😶" GridPane.rowIndex="1" />
+                  <Button fx:id="rButton5" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😈" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="rButton6" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😢" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="rButton7" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😕" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="rButton8" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😮" GridPane.rowIndex="2" />
+                  <Button fx:id="rButton9" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😒" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="rButton10" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😘" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="rButton11" mnemonicParsing="false" onAction="#pressReaction" prefHeight="70.0" prefWidth="70.0" styleClass="reactionButton" text="😀" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               </children>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </GridPane>
+            <Region maxHeight="10.0" minHeight="5.0" VBox.vgrow="ALWAYS" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Leaderboard:" />
+            <ListView fx:id="playerList" prefHeight="422.0" prefWidth="322.0">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding></ListView>
+            <Region minHeight="5.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

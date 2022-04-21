@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" styleClass="border_plane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.MPleaderboardCtrl">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="0.0" prefWidth="1920.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region minHeight="20.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="197.0" prefWidth="239.0">
+                     <children>
+                        <Region minHeight="10.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Half way there!">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Text>
+                        <Region minHeight="5.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <HBox prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Region minHeight="5.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" text="Current leaderboard">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Region minHeight="5.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Region minHeight="20.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxHeight="616.0" prefHeight="616.0" prefWidth="1920.0" styleClass="text">
+               <children>
+                  <Region minHeight="30.0" HBox.hgrow="ALWAYS" />
+                  <ListView fx:id="leaderboardList" prefHeight="616.0" prefWidth="650.0">
+                     <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                     </padding>
+                  </ListView>
+                  <Region minHeight="30.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="1920.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region minHeight="20.0" HBox.hgrow="ALWAYS" />
+                  <VBox>
+                     <children>
+                        <Region minHeight="20.0" minWidth="0.0" VBox.vgrow="ALWAYS" />
+                        <Label id="onderText" fx:id="bottomText" text="Label">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Region minHeight="20.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <Region minHeight="20.0" HBox.hgrow="ALWAYS" />
+               </children></HBox>
+            <Region minHeight="10.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

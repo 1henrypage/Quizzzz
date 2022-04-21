@@ -1,0 +1,45 @@
+@import "ScreenCommonCSS.css";
+
+.border_plane {
+    -fx-background-color: -background-color;
+}
+
+
+* :disabled {
+    -fx-opacity: 1;
+}
+
+.list-view {
+    -fx-background-radius: 20;
+    -fx-border-radius: 15;
+    -fx-border-width: 5;
+    -fx-border-color: -button-border-color;
+    -fx-background-insets: 0.1;
+    -fx-background-color: -button-color;
+}
+
+.list-cell, .list-cell:focused {
+    -fx-border-width: 2;
+    -fx-border-color: -button-border-color;
+    -fx-background-color: -button-color;
+}
+
+.list-cell .text {
+    -fx-font-size: 50;
+}
+
+.button .text {
+    -fx-font-size:33;
+}
+
+.scroll-bar{
+    -fx-background-color: -button-color;
+}
+
+.decrement-button, .increment-button, .increment-arrow, .decrement-arrow{
+    -fx-background-color: -button-color;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: red;
+}

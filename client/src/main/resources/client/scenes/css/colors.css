@@ -1,0 +1,19 @@
+* {
+    -background-color: #03071e;
+
+    -button-color: #508991;
+    -button-hover-color: #74B3CE;
+    -button-border-color: #004346;
+
+    -correct-color: #90EE90;
+    -correct-border-color: #00FF00;
+
+    -incorrect-color: #d00000;
+    -incorrect-border-color: #9d0208;
+
+    -joker-disabled-color: #626060;
+    -joker-disabled-border: #939191;
+    -joker-color: #915850;
+    -joker-border-color: #5b352f;
+    -joker-hover-color: #cc9085;
+}

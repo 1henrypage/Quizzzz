@@ -1,0 +1,64 @@
+@import "colors.css";
+
+.border_plane {
+    -fx-background-color: -background-color;
+}
+
+.text {
+    -fx-fill: white;
+    -fx-font-size: 40;
+}
+
+.smallText{
+    -fx-font-size: 34px;
+    -fx-fill: white;
+}
+
+.title {
+    -fx-fill: white;
+}
+
+/*The difference between the above and below is that titles are used everywhere and maintitle
+should only be used for occasions such as the main screen, really big ones*/
+
+.maintitle {
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 4px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: -button-color;
+    -fx-background-radius: 50;
+    -fx-border-color: -button-border-color;
+    -fx-border-width: 6;
+    -fx-border-radius: 36;
+    -fx-background-insets: 0.02;
+}
+
+.buttonMainScreen {
+    -fx-background-color: -button-color;
+    -fx-background-radius: 50;
+    -fx-border-color: -button-border-color;
+    -fx-border-width: 6;
+    -fx-border-radius: 36;
+    -fx-background-insets: 0.02;
+    -fx-min-height: 100px;
+}
+
+.button:hover {
+    -fx-background-color: -button-hover-color;
+}
+
+.alertText{
+    -fx-fill: orange;
+}
+
+.sampleButton, #sampleButton {
+    -fx-font-size: 30;
+}
+
+.correctAnswerText {
+    -fx-fill: -correct-color;
+}
