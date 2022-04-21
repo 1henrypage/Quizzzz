@@ -1,8 +1,10 @@
 # Quizzz!
 
-This README will need to contain a description of your project, how to run it, how to set up the development environment, and who worked on it.
-This information can be added throughout the course, except for the names of the group members.
-Add your own name (do not add the names for others!) to the section below.
+**IMPORTANT:**
+
+This is a repository containing a little project I did with 4 other computer science students.
+It's a game which was developed using Java Spring, in addition to this, it also features a RESTful backend (REST API).
+
 
 ## Description of project
 Quizzz is an intense, high-paced, quiz-esque game aimed to educate people about energy usages of different activities. 
@@ -10,13 +12,7 @@ It supports singleplayer and multiplayer.
 
 ## Group members
 
-| Profile Picture                                                                                         | Name                  | Email                             |
-|---------------------------------------------------------------------------------------------------------|-----------------------|-----------------------------------|
-| ![](https://secure.gravatar.com/avatar/9568e7770ae1e2274f2f07854c8c16c3?s=50&d=identicon)               | Henry Page            | H.Page@student.tudelft.nl         |
-| ![](https://eu.ui-avatars.com/api/?name=OOPP&length=4&size=50&color=DDD&background=777&font-size=0.325) | Vlad Tudor Stefanescu | V.T.Stefanescu@student.tudelft.nl |
-| ![](https://secure.gravatar.com/avatar/d7a06f5c69ccf4f9f1f782f91c982cc6?s=50&d=identicon)               | Matyas Kollert        | M.Kollert@student.tudelft.nl      |
-| ![](https://eu.ui-avatars.com/api/?name=OOPP&length=4&size=50&color=DDD&background=777&font-size=0.325) | Andrei Dascalu        | A.Dascalu@student.tudelft.nl      |
-| ![](https://eu.ui-avatars.com/api/?name=OOPP&length=4&size=50&color=DDD&background=777&font-size=0.325) | Tom Huisman           | t.m.huisman@student.tudelft.nl    |
+[REDACTED]
 
 ## Installation & Launch
 The following are installation & launch instructions for Quizzz!. Pre-requisite knowledge about the utilisation
@@ -28,19 +24,19 @@ of git and bash is assumed.
 To run or contribute to this project, you must first clone this repository
 #### SSH
 ```
-git clone git@gitlab.ewi.tudelft.nl:cse1105/2021-2022/team-repositories/oopp-group-63/repository-template.git
+[REDACTED]
 ```
 - **Warning:** You must have a valid SSH key. The set-up instructions & most common errors can be found [here](https://docs.gitlab.com/ee/user/ssh.html)
 
 #### HTTP (Not Recommended)
 ```
-git clone https://gitlab.ewi.tudelft.nl/cse1105/2021-2022/team-repositories/oopp-group-63/repository-template.git
+[REDACTED]
 ```
 
  
 ### Verifying the Build Integrity
 Before proceeding to the next step, ensure that you have a stable build of the product, 
-by typing the folllowing into your console (cmd/bash):
+by typing the following into your console (cmd/bash):
 ```
 gradlew build
 ```
@@ -54,8 +50,7 @@ properly without any activities.
 #### Downloading the Activities
 The compressed activity archive can be downloaded from  [here](https://gitlab.ewi.tudelft.nl/cse1105/2021-2022/activity-bank/-/jobs/2444739/artifacts/raw/20220311-oopp-activity-bank.zip)
 
-Unzip the archive, rename the directory as `activitybank` and put it in the root directory of the project.
-If there is already a directory called `activitybank`, replace the directory with the new one. 
+Unzip the archive, rename the directory as "activitybank" and put it in the root directory of the project.
 
 
 #### Loading the Activities from the JSON file
@@ -70,7 +65,7 @@ Set it back to `false` right afterwards to ensure that activities don't get relo
 
 To start the server do the following:
 
-- Through your IDE, Go to the `Server.Main` class found at `server/src/main/java/server` and run `Main.jar`
+- Through your IDE, Go to the `Main` class found at `server/src/main/java/server` and run `Main.jar`
 
 
 
@@ -84,10 +79,4 @@ To start the client, type the following into your console:
 You should be all set to play the game! Have Fun!
 
 
-
-## How to contribute to it
-- Create an Issue on GitLab 
-- Create a new branch/draft-MR
-- Make/Develop a feature
-- Open a Merge Request!
 
